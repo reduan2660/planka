@@ -25,10 +25,10 @@ services:
       - SECRET_KEY=notsecretkey
 
       # Can be removed after installation
-      - DEFAULT_ADMIN_EMAIL=demo@demo.demo # Do not remove if you want to prevent this user from being edited/deleted
-      - DEFAULT_ADMIN_PASSWORD=demo
-      - DEFAULT_ADMIN_NAME=Demo Demo
-      - DEFAULT_ADMIN_USERNAME=demo
+      - DEFAULT_ADMIN_EMAIL=me@alvereduan.com # Do not remove if you want to prevent this user from being edited/deleted
+      - DEFAULT_ADMIN_PASSWORD=
+      - DEFAULT_ADMIN_NAME=Alve Reduan
+      - DEFAULT_ADMIN_USERNAME=alvereduan
 
       # related: https://github.com/knex/knex/issues/2354
       # As knex does not pass query parameters from the connection string we
@@ -44,7 +44,7 @@ services:
     image: postgres:14-alpine
     restart: unless-stopped
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/planka-data
     environment:
       - POSTGRES_DB=planka
       - POSTGRES_HOST_AUTH_METHOD=trust
